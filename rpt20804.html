@@ -15,23 +15,23 @@
         nav a{
             padding-right: 40px;
          }
-         body > * {
+         body > *:not(section) {
             padding:30px;
         }
         section p{
             float: left;
             width: 33.333%;
             margin: 0;
-            padding: 50px;
+            height: 160px;
+            padding: 20px;
        
         }
-        .box{
-            float: left;
-            width: 33.333%;
-            margin: 0;
-            padding: 50px;
-            background-color: pink;
+        section::after {
+         content: "";
+         clear: both;
+        display: table;
         }
+     
     </style>
 </head>
 <body>
@@ -43,11 +43,11 @@
         <a href="#">nav2</a>
         <a href="#">nav3</a>
     </nav>
-    <section style="background-color: darkcyan;">
-        <h2 style="padding-left: 20px; padding-bottom:30px;">content</h2>
-        <p>내용 1</p>
+    <section style ="background-color:lightgray">
+        <h2 style="padding-left: 20px; padding-bottom: 20px; padding-top: 10px;">content</h2>
+        <p  style="background-color: darkcyan; ">내용 1</p>
         <p style="background-color: dimgray;">내용 2</p>
-        <p>내용 3</p>
+        <p style="background-color: teal;">내용 3</p>
     </section>
   
     <footer style="background-color: darkgrey;">
